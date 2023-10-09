@@ -42,3 +42,34 @@ After creating the package successfully, we source the workspace everytime we bu
 This is basically done for ease of running multiple packages with different dependencies and so on.
 
 Workflow Flexibility: Sourcing the setup.bash script gives you flexibility. You can have multiple workspaces, each with its own set of packages and dependencies, and you can choose which workspace to use by sourcing the corresponding devel/setup.bash script
+
+
+once this basic setup is over, we procede to open multiple folders inside the package beginner tutorials in 
+
+catkin_ws/src/beginner_tutorials
+
+The folders are as follows
+
+beginner_tutorials
+
+                    1)gazebo
+                    
+                    2)launch
+                    
+                    3)scripts
+                    
+                    4)urdf
+
+
+In urdf folder we create a .urdf.xacro file to describe the bot.
+
+In scripts we write the key_reader scripts required to teleoperate the bot.
+
+Launch file is used to launch the urdf bot in Rviz to visualize and also used to launch the bot in gazebo to check for physics compatibility.
+
+In gazebo folder we add the plugins required to operate the bot. It can be skid steering or differential drive
+<br>
+the plugins are imported from the folloeing link
+<br>
+      
+      https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
