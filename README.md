@@ -73,3 +73,9 @@ the plugins are imported from the folloeing link
 <br>
       
       https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
+
+
+
+https://github.com/kmlingaudhaya/first_simulation/issues/1#issue-1932812580
+
+
