@@ -10,6 +10,9 @@ project(beginner_tutorials)
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   message_generation
+  geometry_msgs
+  roscpp
+  rospy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -108,8 +111,11 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-catkin_install_python(PROGRAMS scripts/key_reader.py scripts/move.py
-DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+catkin_install_python(PROGRAMS
+   scripts/key_reader.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
+
 ###########
 ## Build ##
 ###########
@@ -205,3 +211,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(key_reader scripts/key_reader.cpp)
+target_link_libraries(key_reader ${catkin_LIBRARIES})

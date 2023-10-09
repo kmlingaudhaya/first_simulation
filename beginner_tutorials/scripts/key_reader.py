@@ -52,25 +52,25 @@ if __name__ == '__main__':
             key=readKey(settings)
             
             if key == 'w':
-                twist_msg.linear.x = 1.0
-                print("Velocity published: linear.x = 1.0")
+                twist_msg.linear.x = twist_msg.linear.x+0.01
+                print("Velocity published: linear.x = ",twist_msg.linear.x)
             elif key == 's':
-                twist_msg.linear.x = -1.0
-                print("Velocity published: linear.x = -1.0")
+                twist_msg.linear.x = twist_msg.linear.x+-0.01
+                print("Velocity published: linear.x = ",twist_msg.linear.x)
             else:
-                twist_msg.linear.x = 0.0
+                
                 print("velocity published is null")
             
-            # if key=='d':
-            #     rc_dir_pub.publish(6)
-            #     print(key," is pressed")
-            # elif key=='a':
-            #     rc_dir_pub.publish(4)
-            #     print(key," is pressed")
-            # else:
-            #     rc_dir_pub.publish(5)
-            #     print("none is pressed")
-            
+            if key == 'd':
+                twist_msg.angular.z = twist_msg.angular.z+0.01
+                print("Changing direction : ",twist_msg.angular.z)
+            elif key == 'a':
+                twist_msg.angular.z = twist_msg.angular.z+-0.01
+                print("Changing direction : ",twist_msg.angular.z)
+            else:
+                
+                print("No change in direction published")
+            cmd_vel.publish(twist_msg)
             if key=='p':
                 break
             
