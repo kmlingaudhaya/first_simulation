@@ -76,6 +76,10 @@ the plugins are imported from the folloeing link
 
 
 
-https://github.com/kmlingaudhaya/first_simulation/issues/1#issue-1932812580
+some Rviz and Gazebo simulation pictures
+![Screenshot from 2023-10-09 16-19-50](https://github.com/kmlingaudhaya/first_simulation/assets/134930329/b1556d7d-a35a-4e9a-86a4-973f8ded3084)
+
+
+![Screenshot from 2023-10-09 16-26-11](https://github.com/kmlingaudhaya/first_simulation/assets/134930329/bb16e8bf-a0ec-44eb-852b-3cae80370434)
 
 
